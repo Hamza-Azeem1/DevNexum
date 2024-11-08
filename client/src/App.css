@@ -1,3 +1,4 @@
+/* Fonts and general styles */
 .agdasima-regular {
   font-family: "Agdasima", sans-serif;
   font-weight: 400;
@@ -10,7 +11,6 @@
   font-style: normal;
 }
 
-/* General body styles with background gradient */
 body {
   margin: 0;
   padding: 0;
@@ -24,121 +24,247 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full height */
-  width: 100%; /* Full width */
-  background: linear-gradient(
-    to right,
-    #000,
-    #1e3a8a
-  ); /* Black to blue gradient */
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #000, #1e3a8a);
   color: white;
-  padding: 2rem;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
 }
 
-/* Eyebrow container that holds the two eyebrows */
 .eyebrow_container {
   position: absolute;
-  top: 32%;
-  left: 60%;
+  top: 40%; /* Adjust top for eyebrow alignment */
+  left: 61%;
   transform: translateX(-50%);
   display: flex;
-  gap: 30px;
+  gap: 10px;
 }
 
-/* Styles for the eyebrow elements */
+/* Responsive adjustments */
+@media (min-width: 480px) {
+  .eyebrow_container {
+    gap: 15px;
+    top: 40%;
+    left: 65%;
+  }
+}
+
+@media (min-width: 768px) {
+  .eyebrow_container {
+    gap: 20px;
+    top: 38%;
+    left: 65%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .eyebrow_container {
+    gap: 25px;
+    top: 34%; /* Adjust top for eyebrow alignment */
+    left: 61%;
+  }
+}
+
+/* Eyebrow elements */
 .eye_brow {
-  width: 120px;
-  height: 20px;
+  width: 50px;
+  height: 8px;
   border-radius: 10px;
   background-color: #04003b;
 }
 
+@media (min-width: 480px) {
+  .eye_brow {
+    width: 70px;
+    height: 10px;
+  }
+}
+
+@media (min-width: 640px) {
+  .eye_brow {
+    width: 90px;
+    height: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .eye_brow {
+    width: 100px;
+    height: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .eye_brow {
+    width: 120px;
+    height: 20px;
+  }
+}
+
 .left {
-  transform: rotate(-20deg);
+  transform: rotate(-10deg);
   border-bottom-left-radius: 0px;
   border-top-left-radius: 90px;
 }
 
 .right {
-  transform: rotate(20deg);
+  transform: rotate(10deg);
   border-bottom-right-radius: 0px;
   border-top-right-radius: 90px;
 }
 
-/* Styles for the eyes */
+/* Eye styling */
 .eye-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 8px;
 }
 
-/* Eye styles */
+@media (min-width: 480px) {
+  .eye-container {
+    gap: 10px;
+  }
+}
+
+@media (min-width: 640px) {
+  .eye-container {
+    gap: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .eye-container {
+    gap: 20px;
+  }
+}
+
 .eye {
   position: relative;
   display: inline-block;
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  width: 50px;
+  height: 50px;
   background: #fff;
-  box-shadow: inset 0 0 50px rgb(0, 0, 0);
+  box-shadow: inset 0 0 20px rgb(0, 0, 0);
   transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
+}
 
-  &:hover {
-    box-shadow: inset 0 0 100px rgb(10, 6, 236);
-    scale: 1 0.92;
-  }
-
-  &:active {
-    scale: 0.8 0.01;
-    background-color: #000;
-  }
-
-  &:active::after {
-    background-color: #000;
-    border: 20px solid #000;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &::after {
-    content: " ";
-    position: absolute;
-    bottom: 5%;
-    right: 50%;
-    width: 30px;
-    height: 30px;
-    background: #000;
-    border-radius: 50%;
-    border: 20px solid #2e536f;
-    pointer-events: none;
-    transition: 0.5s;
+@media (min-width: 480px) {
+  .eye {
+    width: 70px;
+    height: 70px;
   }
 }
 
-/* COMING SOON text with eyes replacing OO */
+@media (min-width: 640px) {
+  .eye {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .eye {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Hover and active states for eyes */
+.eye:hover {
+  box-shadow: inset 0 0 100px rgb(10, 6, 236);
+  scale: 1 0.92;
+}
+
+.eye:active {
+  scale: 0.8 0.01;
+  background-color: #000;
+}
+
+.eye:active::after {
+  background-color: #000;
+  border: 10px solid #000;
+}
+
+.eye::after {
+  content: "";
+  position: absolute;
+  bottom: 5%;
+  right: 50%;
+  width: 15px;
+  height: 15px;
+  background: #000;
+  border-radius: 50%;
+  border: 10px solid #2e536f;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
 .coming-soon-text {
   font-family: "Agdasima", sans-serif;
-  font-size: 6rem;
   font-weight: 700;
-  text-align: center;
   color: white;
   letter-spacing: 2px;
   line-height: 1.2;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 2.5rem;
 }
 
-/* Tagline styling */
+@media (min-width: 480px) {
+  .coming-soon-text {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .coming-soon-text {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .coming-soon-text {
+    font-size: 5.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .coming-soon-text {
+    font-size: 6.5rem;
+  }
+}
+
 .text-2xl {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: center;
+  font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.7);
+  margin-top: 1rem;
 }
 
-.font-light {
-  font-weight: lighter;
+@media (min-width: 480px) {
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .text-2xl {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-2xl {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-2xl {
+    font-size: 2.25rem;
+  }
 }
