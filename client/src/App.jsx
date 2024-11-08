@@ -11,17 +11,16 @@ function App() {
         </div>
 
         {/* Centered and styled DevNexum text */}
-        <div className="text-6xl font-bold font-arial tracking-widest drop-shadow-lg">
-          Denexum
+        <div style={{ fontFamily: 'Agdasima, sans-serif' }} className="text-8xl font-bold tracking-widest drop-shadow-lg">
+          DevNexum
         </div>
-        <div className="text-2xl mt-4 text-gray-300 font-light">
+        {/* Tagline with bold Agdasima font */}
+        <div style={{ fontFamily: 'Agdasima, sans-serif', fontWeight: 700 }} className="text-4xl mt-4 text-gray-300 font-light">
           Crafting Digital Solutions, Empowering Your Vision.
         </div>
-
       </div>
     </>
   );
 }
 
 export default App;
-
