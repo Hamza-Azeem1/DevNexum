@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       {/* Main container with gradient background */}
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-700 to-black text-white">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-black to-blue-700 text-white">
         {/* Logo in top-left corner */}
         <div className="absolute -top-10 left-8">
           <img src={logo} alt="DevNexum Logo" className="h-44 w-34" />
