@@ -33,38 +33,30 @@ body {
   position: relative;
 }
 
-.eyebrow_container {
-  position: absolute;
-  top: 40%; /* Adjust top for eyebrow alignment */
-  left: 61%;
-  transform: translateX(-50%);
+/* Eye container wrapper (wraps both eyes and eyebrows) */
+.eye-container-wrapper {
+  display: inline-block;
+  position: relative;
+  top: 0; /* Make sure it's at the right height */
+}
+
+/* Eye container (container of eyes) */
+.eye-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
-/* Responsive adjustments */
-@media (min-width: 480px) {
-  .eyebrow_container {
-    gap: 15px;
-    top: 40%;
-    left: 65%;
-  }
-}
-
-@media (min-width: 768px) {
-  .eyebrow_container {
-    gap: 20px;
-    top: 38%;
-    left: 65%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .eyebrow_container {
-    gap: 25px;
-    top: 34%; /* Adjust top for eyebrow alignment */
-    left: 61%;
-  }
+/* Eyebrow container */
+.eyebrow-container {
+  position: absolute;
+  top: -30%; /* Move eyebrows above the eyes */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 1; /* Ensure eyebrows appear above eyes */
 }
 
 /* Eyebrow elements */
@@ -73,33 +65,35 @@ body {
   height: 8px;
   border-radius: 10px;
   background-color: #04003b;
+  transition: transform 0.1s ease-in-out; /* Smooth eyebrow movement */
 }
 
+/* Responsive adjustments for eyebrows */
 @media (min-width: 480px) {
   .eye_brow {
-    width: 70px;
+    width: 60px;
     height: 10px;
   }
 }
 
 @media (min-width: 640px) {
   .eye_brow {
-    width: 90px;
+    width: 75px;
     height: 12px;
   }
 }
 
 @media (min-width: 768px) {
   .eye_brow {
-    width: 100px;
-    height: 15px;
+    width: 90px;
+    height: 14px;
   }
 }
 
 @media (min-width: 1024px) {
   .eye_brow {
-    width: 120px;
-    height: 20px;
+    width: 110px;
+    height: 16px;
   }
 }
 
@@ -116,31 +110,6 @@ body {
 }
 
 /* Eye styling */
-.eye-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-@media (min-width: 480px) {
-  .eye-container {
-    gap: 10px;
-  }
-}
-
-@media (min-width: 640px) {
-  .eye-container {
-    gap: 15px;
-  }
-}
-
-@media (min-width: 768px) {
-  .eye-container {
-    gap: 20px;
-  }
-}
-
 .eye {
   position: relative;
   display: inline-block;
@@ -149,7 +118,7 @@ body {
   height: 50px;
   background: #fff;
   box-shadow: inset 0 0 20px rgb(0, 0, 0);
-  transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
+  transition: transform 0.1s ease-in-out; /* Smooth rotation transition */
 }
 
 @media (min-width: 480px) {
@@ -173,7 +142,6 @@ body {
   }
 }
 
-/* Hover and active states for eyes */
 .eye:hover {
   box-shadow: inset 0 0 100px rgb(10, 6, 236);
   scale: 1 0.92;
@@ -203,6 +171,7 @@ body {
   transition: 0.5s;
 }
 
+/* Text and other styles */
 .coming-soon-text {
   font-family: "Agdasima", sans-serif;
   font-weight: 700;
