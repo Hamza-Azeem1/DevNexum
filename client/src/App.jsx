@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import logo from '../public/logo.png';
 
 function App() {
   const [mouseCoordinates, setMouseCoordinates] = useState({ x: 0, y: 0 });
@@ -61,8 +60,8 @@ function App() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen w-full bg-gradient-to-r from-black to-blue-900 text-white text-center relative font-sans">
-      <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
-        <img src={logo} alt="DevNexum Logo" className="h-20 w-auto sm:h-24 md:h-32" />
+      <div className="absolute -top-11 left-1">
+        <img src='/logo.png' alt="DevNexum Logo" className="h-30 w-44" />
       </div>
 
       <div className="flex items-center justify-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider mb-4">
