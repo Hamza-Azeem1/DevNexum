@@ -64,7 +64,7 @@ function App() {
         <img src='/logo.png' alt="DevNexum Logo" className="h-30 w-44" />
       </div>
 
-      <div className="flex items-center justify-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider mb-4">
+      <div className="flex items-center justify-center text-3xl sm:text-4xl md:text-6xl lg:text-7xl agdasima-bold tracking-wider mb-4">
         COMING S
         <span className="relative inline-flex items-center ml-2 mr-2">
           <div className="flex items-center gap-2 sm:gap-3 md:gap-4 relative">
@@ -121,7 +121,7 @@ function App() {
         N
       </div>
 
-      <div className="text-sm sm:text-lg md:text-xl lg:text-2xl mt-4 text-gray-300 px-4 sm:px-0">
+      <div className="text-sm agdasima-regular sm:text-lg md:text-xl lg:text-2xl mt-4 text-gray-300 px-4 sm:px-0">
         Crafting Digital Solutions, Empowering Your Vision.
       </div>
     </div>
